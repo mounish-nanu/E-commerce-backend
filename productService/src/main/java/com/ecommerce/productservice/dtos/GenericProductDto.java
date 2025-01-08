@@ -1,12 +1,5 @@
 package com.ecommerce.productservice.dtos;
 
-import com.ecommerce.productservice.models.BaseModel;
-import com.ecommerce.productservice.models.Category;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class GenericProductDto {
         private Long id;
         private String title;
@@ -14,49 +7,53 @@ public class GenericProductDto {
         private String image;
         private String category;
         private double price;
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-    public String getDescription() {
-        return description;
-    }
+        public Long getId() {
+                return this.id;
+        }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public String getTitle() {
-        return title;
-    }
+        public String getTitle() {
+                return this.title;
+        }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    public double getPrice() {
-        return price;
-    }
+        public String getDescription() {
+                return this.description;
+        }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-    public String getCategory() {
-        return category;
-    }
+        public String getImage() {
+                return this.image;
+        }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+        public String getCategory() {
+                return this.category;
+        }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+        public double getPrice() {
+                return this.price;
+        }
 
-    public Long getId() {
-        return id;
-    }
+        public void setId(Long id) {
+                this.id = id;
+        }
 
+        public void setTitle(String title) {
+                this.title = title;
+        }
+
+        public void setDescription(String description) {
+                this.description = description;
+        }
+
+        public void setImage(String image) {
+                this.image = image;
+        }
+
+        public void setCategory(String category) {
+                this.category = category;
+        }
+
+        public void setPrice(double price) {
+                this.price = price;
+        }
 }
 
