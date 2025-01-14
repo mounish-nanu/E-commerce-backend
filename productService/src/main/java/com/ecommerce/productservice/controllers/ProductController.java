@@ -1,10 +1,7 @@
 package com.ecommerce.productservice.controllers;
 
-import com.ecommerce.productservice.dtos.ExceptionDto;
-import com.ecommerce.productservice.dtos.FakeStoreProductDto;
 import com.ecommerce.productservice.dtos.GenericProductDto;
 import com.ecommerce.productservice.exceptions.NotFoundExceptions;
-import com.ecommerce.productservice.models.Product;
 import com.ecommerce.productservice.services.FakeStoreProductService;
 import com.ecommerce.productservice.services.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;

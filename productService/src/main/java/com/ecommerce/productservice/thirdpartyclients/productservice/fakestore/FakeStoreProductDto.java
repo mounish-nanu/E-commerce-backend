@@ -1,4 +1,4 @@
-package com.ecommerce.productservice.dtos;
+package com.ecommerce.productservice.thirdpartyclients.productservice.fakestore;
 
 public class FakeStoreProductDto {
     private Long id;
