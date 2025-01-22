@@ -4,22 +4,23 @@ import jakarta.persistence.Entity;
 
 @Entity
 public class Price extends BaseModel {
-    String Currency;
-    double Price;
+    private String currency; // Use lowercase for the field name
+    private double price;
 
+    // Getters and Setters
     public String getCurrency() {
-        return this.Currency;
+        return this.currency;
     }
 
     public double getPrice() {
-        return this.Price;
+        return this.price;
     }
 
-    public void setCurrency(String Currency) {
-        this.Currency = Currency;
+    public void setCurrency(String currency) {
+        this.currency = currency;
     }
 
-    public void setPrice(double Price) {
-        this.Price = Price;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

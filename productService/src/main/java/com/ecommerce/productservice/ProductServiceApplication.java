@@ -14,6 +14,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @SpringBootApplication
 public class ProductServiceApplication implements CommandLineRunner {
 
@@ -57,6 +59,8 @@ public class ProductServiceApplication implements CommandLineRunner {
         product.setCategory(savedcategory);
 
         productRepository.save(product);
+
+        List<Product> products = productRepository.findAllByTitle("Apple Mobiles");
 
     }
 
