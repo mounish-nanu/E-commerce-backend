@@ -1,14 +1,9 @@
-package com.ecommerce.productservice.inheritancedemo.singletable;
+package com.ecommerce.productservice.inheritancedemo.tableperclass;
 
 import jakarta.persistence.*;
 
-@Entity(name = "st_user")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(
-        name = "userType",
-        discriminatorType = DiscriminatorType.INTEGER
-)
-@DiscriminatorValue(value = "0")
+@Entity(name = "tpc_user")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

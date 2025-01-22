@@ -1,9 +1,9 @@
-package com.ecommerce.productservice.inheritancedemo.singletable;
+package com.ecommerce.productservice.inheritancedemo.joinedtable;
 
 import jakarta.persistence.*;
 
-@Entity(name = "st_user")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Entity(name = "jt_user")
+@Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(
         name = "userType",
         discriminatorType = DiscriminatorType.INTEGER

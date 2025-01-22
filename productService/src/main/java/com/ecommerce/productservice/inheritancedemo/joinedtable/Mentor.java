@@ -1,11 +1,10 @@
-package com.ecommerce.productservice.inheritancedemo.singletable;
+package com.ecommerce.productservice.inheritancedemo.joinedtable;
 
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
-@Entity(name = "st_mentor")
-@DiscriminatorValue(value = "3")
+@Entity(name = "jt_mentor")
 public class Mentor extends User {
     private double averageRating;
 
