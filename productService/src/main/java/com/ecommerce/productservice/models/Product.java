@@ -1,7 +1,11 @@
 package com.ecommerce.productservice.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+
+import java.util.List;
 
 @Entity
 public class Product extends BaseModel {
@@ -10,9 +14,13 @@ public class Product extends BaseModel {
     private String image;
     @ManyToOne
     private Category category;
-    private double price;
+    @OneToOne
+    private Price price;
 
-    public Product(String title, String description, String image, Category category, double price) {
+    @ManyToMany
+    private List<Orders> orders;
+
+    public Product(String title, String description, String image, Category category, Price price) {
         this.title = title;
         this.description = description;
         this.image = image;
@@ -39,7 +47,7 @@ public class Product extends BaseModel {
         return this.category;
     }
 
-    public double getPrice() {
+    public Price getPrice() {
         return this.price;
     }
 
@@ -59,7 +67,7 @@ public class Product extends BaseModel {
         this.category = category;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Price price) {
         this.price = price;
     }
 }
